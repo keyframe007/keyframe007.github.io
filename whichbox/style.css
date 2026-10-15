@@ -1,0 +1,112 @@
+/* WhichBox pages: the app's Kraft colors, light and dark. */
+:root {
+  --background: #F3ECE0;
+  --card: #FFFBF5;
+  --tile: #F1DFC3;
+  --accent: #9A5420;
+  --text: #1C1712;
+  --secondary: #6B5E52;
+  color-scheme: light dark;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #16110C;
+    --card: #251E17;
+    --tile: #3B2E21;
+    --accent: #EBA65C;
+    --text: #F5EEE6;
+    --secondary: #B5A796;
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--text);
+  font: 17px/1.55 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
+  -webkit-text-size-adjust: 100%;
+}
+
+main {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 40px 16px 64px;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 28px;
+}
+
+header img {
+  width: 72px;
+  height: 72px;
+  border-radius: 16px;
+  flex-shrink: 0;
+}
+
+header .app-name {
+  margin: 0;
+  font: 700 15px/1.2 ui-rounded, -apple-system, sans-serif;
+  color: var(--secondary);
+  letter-spacing: 0.02em;
+}
+
+h1 {
+  margin: 2px 0 0;
+  font: 700 32px/1.15 ui-rounded, -apple-system, sans-serif;
+}
+
+h2 {
+  margin: 0 0 8px;
+  font: 600 20px/1.3 ui-rounded, -apple-system, sans-serif;
+}
+
+section {
+  background: var(--card);
+  border-radius: 20px;
+  padding: 20px 22px;
+  margin: 0 0 14px;
+}
+
+section p:first-of-type { margin-top: 0; }
+section p:last-child, section ul:last-child { margin-bottom: 0; }
+
+ul { padding-left: 22px; }
+li { margin: 4px 0; }
+
+a { color: var(--accent); }
+
+.lead {
+  font-size: 19px;
+  margin: 0 0 24px;
+}
+
+.contact {
+  background: var(--tile);
+}
+
+.contact .email {
+  font-size: 20px;
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+
+.meta {
+  color: var(--secondary);
+  font-size: 15px;
+  margin-top: 28px;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 20px;
+  margin-top: 8px;
+  font-size: 15px;
+}
